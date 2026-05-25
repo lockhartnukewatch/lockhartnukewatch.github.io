@@ -1,0 +1,37 @@
+@import "minimal-mistakes";
+
+/* =========================================
+   Custom Wide Landing Page with Sidebar
+   ========================================= */
+
+.landing-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  align-items: flex-start;
+  margin-top: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  box-sizing: border-box;
+}
+
+.landing-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.landing-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .landing-wrapper {
+    flex-direction: column;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .landing-sidebar {
+    width: 100%;
+  }
+}

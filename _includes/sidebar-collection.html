@@ -1,0 +1,19 @@
+{% for sidebar_item in include.collections %}
+  <nav class="nav__items">
+    <h3 class="nav__title">{{ sidebar_item.title | default: sidebar_item.name }}</h3>
+    <ul>
+      {% for item in site[sidebar_item.name] %}
+        <li>
+          {% if item.external_url %}
+            <a href="{{ item.external_url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+          {% else %}
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% unless forloop.last %}
+    <hr style="margin: 1em 0; border: 0; border-top: 1px solid #eee;">
+  {% endunless %}
+{% endfor %}

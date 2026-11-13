@@ -1,0 +1,67 @@
+---
+// Base layout: <head> metadata, header (site title + nav), main, footer.
+// Ported from the Jekyll era: site title/description from _config.yml,
+// Facebook group link + contact email in the footer.
+// Note: the current Jekyll site has no visible nav; the About/Archive links
+// here are a small improvement (per MIGRATION.md design decision 1).
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Skip the 70ch article width (used by the landing page + sidebar). */
+  wide?: boolean;
+}
+
+const SITE_TITLE = 'Lockhart Nuke Watch';
+const SITE_DESCRIPTION =
+  '"Lockhart Nuke Watch" was started to try and gather information about the Groves Isotope nuclear reactor being built in Lockhart, Texas by Oklo. Find us at on Facebook at https://www.facebook.com/groups/987252890512778.';
+const FACEBOOK_URL = 'https://www.facebook.com/groups/987252890512778';
+const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
+
+const { title, description = SITE_DESCRIPTION, wide = false } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Archive', href: '/archive/' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="/">{SITE_TITLE}</a>
+      <nav class="site-nav" aria-label="Main">
+        {
+          navLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+      </nav>
+    </header>
+
+    <main class:list={['site-main', { wide }]}
+      role="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href={FACEBOOK_URL} target="_blank" rel="noopener">
+          Lockhart Nuke Watch on Facebook
+        </a>
+        {' '}
+        &middot; <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+      </p>
+    </footer>
+  </body>
+</html>

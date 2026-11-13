@@ -1,0 +1,166 @@
+/* Base stylesheet: minimal readable article typography, plus the existing
+   .landing-* sidebar rules carried over from assets/css/main.scss. */
+
+:root {
+  --text: #222;
+  --link: #1a6ba8;
+  --muted: #666;
+  --rule: #eee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  margin: 1.4em 0 0.5em;
+}
+
+p {
+  margin: 0.8em 0;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: 0.2em 1em;
+  border-left: 4px solid var(--rule);
+  color: var(--muted);
+}
+
+code,
+pre {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  background: #f7f7f7;
+}
+
+/* Header / footer ------------------------------------------------------ */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1.5em;
+  padding: 1em 3em;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1em;
+}
+
+.site-main {
+  max-width: 70ch;
+  padding: 0 3em;
+}
+
+.site-main.wide {
+  max-width: none;
+  padding: 0;
+}
+
+.site-footer {
+  margin-top: 3em;
+  padding: 1em 3em;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Landing page: content + sidebar (unchanged from assets/css/main.scss) -- */
+
+.landing-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  align-items: flex-start;
+  margin-top: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  box-sizing: border-box;
+}
+
+.landing-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.landing-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .landing-wrapper {
+    flex-direction: column;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .landing-sidebar {
+    width: 100%;
+  }
+}
+
+/* 404 page (inline styles from the old 404.html) ------------------------- */
+
+.notfound .container {
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.notfound h1 {
+  margin: 30px 0;
+  font-size: 4em;
+  line-height: 1;
+  letter-spacing: -1px;
+}

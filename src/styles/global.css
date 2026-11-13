@@ -150,6 +150,14 @@ pre {
   }
 }
 
+/* Sidebar nav (port of _includes/sidebar-collection.html) --------------- */
+
+.sidebar-rule {
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
 /* 404 page (inline styles from the old 404.html) ------------------------- */
 
 .notfound .container {

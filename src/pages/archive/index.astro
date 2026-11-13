@@ -1,0 +1,37 @@
+---
+// Port of archive.markdown: intro text + the Liquid loop over site.archive
+// becomes a getCollection("archive") loop. Order matches Jekyll (filename
+// order: 00-, 10-, 20-, 21-, 50-).
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDate } from '../../lib/format';
+
+const archive = (await getCollection('archive')).sort((a, b) => a.id.localeCompare(b.id));
+---
+
+<BaseLayout title="Archive">
+  <article>
+    <h1>Archive</h1>
+    <p>
+      Earlier VIPR-based analysis before
+      <a href="/updates/2026-05-25-oklo-latest-groves-press-release"
+        >Oklo disclosed that Groves is not a VIPR facility (yet)</a
+      >.
+    </p>
+    <p>
+      They may still be useful -- we still don't know what Oklo will do with
+      Groves long-term, and this may be useful to other communities who
+      <em>are</em> getting a VIPR.
+    </p>
+    <ul class="archive-list">
+      {archive.map((entry) => (
+        <li>
+          <a href={`/archive/${entry.id}/`}>{entry.data.title}</a>
+          {entry.data.date && (
+            <span class="date">— {formatDate(entry.data.date)}</span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </article>
+</BaseLayout>

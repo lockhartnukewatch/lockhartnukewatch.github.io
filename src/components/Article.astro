@@ -1,0 +1,18 @@
+---
+// Shared article page: front matter title as <h1> + markdown body.
+// Used by the /updates/:slug/, /topics/:slug/ and /archive/:slug/ routes.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <article>
+    <h1>{title}</h1>
+    <slot />
+  </article>
+</BaseLayout>

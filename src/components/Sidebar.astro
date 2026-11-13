@@ -1,0 +1,43 @@
+---
+// Port of _includes/sidebar-collection.html.
+// Takes a list of { name, title, items } groups (the Jekyll include read
+// `site[name]` directly; the pages now fetch via getCollection() and pass
+// pre-mapped items). Items with external_url open in a new tab.
+interface SidebarItem {
+  title: string;
+  url?: string;
+  external_url?: string;
+}
+
+interface SidebarGroup {
+  name: string;
+  title: string;
+  items: SidebarItem[];
+}
+
+const { collections } = Astro.props as { collections: SidebarGroup[] };
+---
+
+{
+  collections.map((group, i) => (
+    <>
+      <nav class="nav__items">
+        <h3 class="nav__title">{group.title}</h3>
+        <ul>
+          {group.items.map((item) => (
+            <li>
+              {item.external_url ? (
+                <a href={item.external_url} target="_blank" rel="noopener">
+                  {item.title}
+                </a>
+              ) : (
+                <a href={item.url}>{item.title}</a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
+      {i < collections.length - 1 && <hr class="sidebar-rule" />}
+    </>
+  ))
+}

@@ -53,8 +53,8 @@ src/
   layouts/BaseLayout.astro      # header/footer/typography shell
   components/Sidebar.astro      # port of sidebar-collection.html
   styles/global.css             # minimal base styles + existing .landing-* CSS
-  content/
-    config.ts                   # collections: updates, topics, archive
+  content.config.ts             # collections: updates, topics, archive (Astro 7 requires
+                                # the top-level file, not content/config.ts)
     updates/    (3 .md files)
     topics/     (1 .md file)
     archive/    (5 .md files)
@@ -94,7 +94,7 @@ public/
      - add an explicit `date` to `updates/*` files (Jekyll currently derives dates from the
        filenames `YYYY-MM-DD-name`; Astro does not). Format: `date: 2026-05-08`.
      - keep `title` on everything (used for `<h1>`, `<title>`, and sidebar links).
-   - Define collections in `src/content/config.ts` with a `title` (required) and optional
+   - Define collections in `src/content.config.ts` with a `title` (required) and optional
      `date` / `external_url` schema so the sidebar's `external_url` feature survives.
 
 3. **Build the base layout** (`BaseLayout.astro`):

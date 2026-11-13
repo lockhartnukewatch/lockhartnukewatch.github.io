@@ -127,6 +127,11 @@ public/
    `updates` collection. Otherwise drop it and remove the feed link — note that nothing on
    the site links to it.
 
+   *Done:* `src/pages/feed.xml.js` (served at `/feed.xml` to keep the published URL,
+   not `rss.xml`). Note the old feed was **empty** — jekyll-feed only covers posts and
+   this site uses a custom `updates` collection. Also added `src/pages/sitemap.xml.js`
+   (out-of-plan): the published branch has a `sitemap.xml` referenced by `robots.txt`.
+
 6. **Publish pipeline:**
    - `publish.sh`: replace `jekyll build` with `npm install && npm run build`, then rsync
      `dist/` into the `_site` submodule working tree (keep the existing

@@ -1,5 +1,6 @@
 ---
 title: "Oklo responds with a press release, raising more questions"
+date: 2026-05-11
 ---
 
 On May 11, 2026, Oklo seems to have responded to the questions raised by Lockhart Nuke Watch, with a slick press release. They've added a [Texas](https://oklo.com/isotopes/texas/default.aspx) page.

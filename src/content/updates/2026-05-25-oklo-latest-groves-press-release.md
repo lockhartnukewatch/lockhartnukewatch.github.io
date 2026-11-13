@@ -1,5 +1,6 @@
 ---
 title: "What is the Groves reactor? A dubious experiment?"
+date: 2026-05-25
 ---
 
 Oklo released a [Texas fact sheet](/assets/pdf/Oklo-Texas-Q-A.pdf) in response to questions Lockhart Nuke Watch asked about the Preliminary Documented Safety Analysis (PDSA) for the Groves site Oklo is building in Lockhart.

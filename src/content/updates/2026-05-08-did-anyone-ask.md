@@ -1,5 +1,6 @@
 ---
 title: "Article: Did Anyone Ask Lockhart?"
+date: 2026-05-08
 ---
 
 Lone Star Left recently covered Lockhart's fast-tracked nuclear reactor situation in [Did Anyone Ask Lockhart?](https://www.lonestarleft.com/p/did-anyone-ask-lockhart?triedRedirect=true).

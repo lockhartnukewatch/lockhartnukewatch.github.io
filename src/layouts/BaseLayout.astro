@@ -13,8 +13,6 @@ interface Props {
   description?: string;
   /** Render the persistent sidebar (off only for 404). */
   sidebar?: boolean;
-  /** Drop sidebar groups (e.g. the home page hides "Updates"). */
-  sidebarHide?: ('updates' | 'topics' | 'archive')[];
 }
 
 const SITE_TITLE = 'Lockhart Nuke Watch';
@@ -23,8 +21,7 @@ const SITE_DESCRIPTION =
 const FACEBOOK_URL = 'https://www.facebook.com/groups/987252890512778';
 const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
 
-const { title, description = SITE_DESCRIPTION, sidebar = true, sidebarHide } =
-  Astro.props;
+const { title, description = SITE_DESCRIPTION, sidebar = true } = Astro.props;
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 ---
 
@@ -51,7 +48,7 @@ const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
             <slot />
           </div>
           <aside class="page__sidebar">
-            <Sidebar hide={sidebarHide} />
+            <Sidebar />
           </aside>
         </div>
       ) : (

@@ -2,6 +2,9 @@
 // Landing page: all updates, newest first, date as a small subheading over
 // each title link. The old index.markdown intro now lives on the About page
 // ("About this project"); navigation is all in the sidebar.
+// (The sidebar used to hide its "Updates" group here to avoid duplicating
+// the list in the main content, but the user found that inconsistent, so
+// it now shows on every page.)
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { formatDate } from '../lib/format';
@@ -11,7 +14,7 @@ const updates = (await getCollection('updates')).sort(
 );
 ---
 
-<BaseLayout sidebarHide={['updates']}>
+<BaseLayout>
   <h1>Updates</h1>
   <p>
     News and analysis about Oklo's Groves radioactive isotope production

@@ -180,11 +180,16 @@ public/
   title, and all navigation lives in the sidebar (left on desktop, below content on
   mobile), which gained an "About this site" link.
 - The home page is now the update feed: all updates, newest first, each with its date as
-  a small subheading over the title link (the sidebar's "Updates" group is hidden there).
+  a small subheading over the title link. The sidebar's "Updates" group is still shown
+  there (it was briefly hidden to avoid duplicating the list, but dropped for
+  consistency).
   The old index intro (mission statement) moved to `/about/` as "About this project".
 - Bug found: `about.astro` (and the old `index.astro`) passed a raw markdown string to
   `render()`, which in this Astro version only accepts content entries — the pages
   silently built with an empty body. The about body is now hand-written HTML in the page.
+- Gotcha (also about.astro): Astro compiles page markup like JSX — whitespace containing
+  a newline is stripped, so an `<a>` tag on its own line loses the space to the text
+  around it. Inline links must stay on the same source line as their surrounding text.
 
 ## Out of Scope
 

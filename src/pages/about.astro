@@ -5,6 +5,11 @@
 // entries, so the page silently rendered empty. Hand-written HTML avoids
 // the question. The old index.markdown intro (mission statement) moved here
 // as "About this project" when the home page became the update feed.
+// NOTE: Astro compiles page markup like JSX, where whitespace containing a
+// newline is STRIPPED. Keep inline <a> tags on the same source line as their
+// surrounding text, or the space between text and link disappears in the
+// output.
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const OKLO_NEWSROOM_URL =
@@ -24,13 +29,7 @@ const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
       Oklo.
     </p>
     <p>
-      The
-      <a href={OKLO_NEWSROOM_URL} target="_blank" rel="noopener"
-        >Groves radioactive isotope facility being built by Oklo in Lockhart, Texas</a
-      >
-      has received very little publicity until now. When starting this
-      research, the only available materials were slick press releases and
-      almost impenetrable regulatory documents.
+      The <a href={OKLO_NEWSROOM_URL} target="_blank" rel="noopener">Groves radioactive isotope facility being built by Oklo in Lockhart, Texas</a> has received very little publicity until now. When starting this research, the only available materials were slick press releases and almost impenetrable regulatory documents.
     </p>
     <p>
       This site seeks to correct that and raise awareness of a consequential
@@ -39,15 +38,7 @@ const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
       are aware or not.
     </p>
     <p>
-      Projects like Groves are being fast tracked
-      <a href={NPR_URL} target="_blank" rel="noopener"
-        >under sweeping changes made to nuclear safety directives under the
-        Trump administration</a
-      >
-      starting in 2025. This is not a political issue, but a safety issue.
-      Read the previous link, review the changes in the wording, the
-      side-by-side before and after changes. Ask yourself why the language
-      has been so softened and compromised.
+      Projects like Groves are being fast tracked <a href={NPR_URL} target="_blank" rel="noopener">under sweeping changes made to nuclear safety directives under the Trump administration</a> starting in 2025. This is not a political issue, but a safety issue. Read the previous link, review the changes in the wording, the side-by-side before and after changes. Ask yourself why the language has been so softened and compromised.
     </p>
     <p>
       Keep these changes in mind when reviewing the questions and their
@@ -68,16 +59,10 @@ const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
     </p>
     <h2>Contact</h2>
     <p>
-      Find us at
-      <a href={FACEBOOK_URL} target="_blank" rel="noopener"
-        >Lockhart Nuke Watch on Facebook</a
-      >
-      or <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+      Find us at <a href={FACEBOOK_URL} target="_blank" rel="noopener">Lockhart Nuke Watch on Facebook</a> or <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
     </p>
     <p>
-      What else do you wish you knew about this Lockhart nuclear reactor?
-      Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with
-      your questions and concerns. All we have is each other.
+      What else do you wish you knew about this Lockhart nuclear reactor? Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with your questions and concerns. All we have is each other.
     </p>
     <h2>About the author</h2>
     <p>Well, it ain't about me, darlin'.</p>

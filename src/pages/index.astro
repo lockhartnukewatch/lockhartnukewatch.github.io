@@ -1,32 +1,8 @@
 ---
 // Landing page: port of index.markdown + _layouts/landing.html.
-// Markdown body is kept verbatim (including the relative `updates/...` link,
-// which works because the index sits at / — see MIGRATION.md "Known Issues").
-import { getCollection, render } from 'astro:content';
+// The sidebar now lives in BaseLayout, so this page is just the intro body.
+import { render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Sidebar from '../components/Sidebar.astro';
-
-const updates = (await getCollection('updates')).sort(
-  (a, b) => (a.data.date?.getTime() ?? 0) - (b.data.date?.getTime() ?? 0),
-);
-const topics = (await getCollection('topics')).sort((a, b) => a.id.localeCompare(b.id));
-
-const sidebarCollections = [
-  {
-    name: 'updates',
-    title: 'Updates',
-    items: updates.map((e) => ({ title: e.data.title, url: `/updates/${e.id}/` })),
-  },
-  {
-    name: 'topics',
-    title: 'FAQ Topics',
-    items: topics.map((e) => ({
-      title: e.data.title,
-      url: `/topics/${e.id}/`,
-      external_url: e.data.external_url,
-    })),
-  },
-];
 
 const { Content: IndexContent } = await render(`
 # Lockhart Nuke Watch FAQ
@@ -37,7 +13,7 @@ Questions we should be asking about Oklo's Groves radioactive isotope production
 
 Oklo released a Texas fact sheet about the Groves site.
 
-Read our analysis: [What is the Groves reactor? A dubious experiment?](updates/2026-05-25-oklo-latest-groves-press-release).
+Read our analysis: [What is the Groves reactor? A dubious experiment?](/updates/2026-05-25-oklo-latest-groves-press-release/).
 
 ## Why should I be concerned about a nuclear reactor in Lockhart?
 
@@ -49,7 +25,7 @@ Projects like Groves are being fast tracked [under sweeping changes made to nucl
 
 Keep these changes in mind when reviewing the questions and their researched context below. Operating a nuclear reactor, even a small one, is a serious undertaking that demands transparency and accountability to the lives of the people depending on its responsible design and stewardship.
 
-There are many questions about this project, based on research conducted in pursuit of what that should look like, and how to even know how to ask for it. So many, that they are grouped according to topic on the left.
+There are many questions about this project, based on research conducted in pursuit of what that should look like, and how to even know how to ask for it. So many, that they are grouped according to topic in the sidebar.
 
 As a central Texans, these are the kinds of questions we should be asking, for our future, our children and grandchildren's futures.
 
@@ -59,13 +35,6 @@ Email: [contact@lockhartnuke.watch](https://mailto:contact@lockhartnuke.watch/) 
 `);
 ---
 
-<BaseLayout wide>
-  <div class="landing-wrapper">
-    <div class="landing-content">
-      <IndexContent />
-    </div>
-    <aside class="landing-sidebar">
-      <Sidebar collections={sidebarCollections} />
-    </aside>
-  </div>
+<BaseLayout>
+  <IndexContent />
 </BaseLayout>

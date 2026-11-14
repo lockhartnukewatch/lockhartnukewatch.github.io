@@ -162,13 +162,20 @@ public/
      blockquotes/links, in-page anchors (e.g. `#why-were-foia-requests-filed-for-the-groves-site`
      — GFM slug behavior should match, but verify).
 
-## Known Issues to Preserve as-Is (don't fix in this migration)
+## Known Issues (resolved during post-migration layout work)
 
-- Links to `/topics/20-waste-tritium/` and `/topics/50-significant-reactor-events/` (in
+- ~~Links to `/topics/20-waste-tritium/` and `/topics/50-significant-reactor-events/` (in
   `_updates/2026-05-11-...` and `_archive/50-...`) point at pages that only exist under
-  `/archive/...` — these are already dead links on the live site. Leave them; flag separately.
-- `index.markdown` uses a relative link (`updates/2026-05-25-...`); it works because the
-  index is at the root. Keep as-is or normalize to absolute paths.
+  `/archive/...`~~ — re-pointed to the `/archive/...` URLs.
+- ~~`index.markdown` uses a relative link (`updates/2026-05-25-...`)~~ — normalized to an
+  absolute `/updates/.../` path.
+
+## Post-migration layout changes (beyond this plan)
+
+- `Sidebar.astro` now fetches its own collections (updates, FAQ topics, archive) and is
+  rendered by `BaseLayout` on every page except 404, so the updates/topics/archive lists
+  persist on article pages. The old `.landing-*` wrapper was generalized to `.page`.
+- The current page is highlighted in the sidebar.
 
 ## Out of Scope
 

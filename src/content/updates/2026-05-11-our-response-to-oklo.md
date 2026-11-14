@@ -21,7 +21,7 @@ Why is the normally open and public documentation on Groves [being completely wi
 
 Where can the central Texas community learn more about the outcome from these DOE safety reviews? Where are they being published?
 
-Has the [Texas Commission on Environmental Quality](https://www.tceq.texas.gov/) assessed this project for environmental impacts? Given the potential for water contamination (see [Tritium](/topics/20-waste-tritium/) for example) in the community, this seems well within TCEQ jurisdiction.
+Has the [Texas Commission on Environmental Quality](https://www.tceq.texas.gov/) assessed this project for environmental impacts? Given the potential for water contamination (see [Tritium](/archive/20-waste-tritium/) for example) in the community, this seems well within TCEQ jurisdiction.
 
 Has the facility passed fire code inspection? What codes were evaluated?
 
@@ -49,7 +49,7 @@ While it's good to know that this will not be a classic steam pressure reactor, 
 
 Given the recent changes to DOE regulations in this capacity, the central Texas community has concerns that this may not be a standard that protects workers, the public or the environment. There are now a lot of "MAY" where there used to be "MUST" language. [See for yourself](https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump).
 
-How is the integrity of the light water pool and the heavy water (DANK) tank maintained in the event of problems during [significant transients](/topics/50-significant-reactor-events/#what-happens-if-the-target-material-becomes-stuck-or-jammed-in-the-reactor-how-is-this-handled)
+How is the integrity of the light water pool and the heavy water (DANK) tank maintained in the event of problems during [significant transients](/archive/50-significant-reactor-events/#what-happens-if-the-target-material-becomes-stuck-or-jammed-in-the-reactor-how-is-this-handled)
 
 > Safety: Groves is not designed around high-pressure steam generation. As a pool-type, water-cooled, non-pressurized isotope production reactor using low-enriched uranium fuel, Groves uses water in a controlled pool environment for cooling and shielding rather than operating like a large, pressurized commercial power reactor. A “meltdown”, in technical terms, is what happens if the fuel is damaged, cooling is lost, or radioactive material is released. The DOE safety review will analyze credible accident scenarios, including fuel damage and release pathways, and it will define barriers, operating limits, monitoring, and emergency actions required before startup. 
 >

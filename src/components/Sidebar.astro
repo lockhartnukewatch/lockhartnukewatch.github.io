@@ -1,25 +1,41 @@
 ---
-// Port of _includes/sidebar-collection.html.
-// Takes a list of { name, title, items } groups (the Jekyll include read
-// `site[name]` directly; the pages now fetch via getCollection() and pass
-// pre-mapped items). Items with external_url open in a new tab.
-interface SidebarItem {
-  title: string;
-  url?: string;
-  external_url?: string;
-}
+// Persistent site sidebar: updates, FAQ topics, and archive entries.
+// Fetches its own collections (Jekyll read site collections directly; this is
+// the Astro equivalent) so any page can just drop in <Sidebar />.
+// Items with external_url open in a new tab.
+import { getCollection } from 'astro:content';
 
-interface SidebarGroup {
-  name: string;
-  title: string;
-  items: SidebarItem[];
-}
+const updates = (await getCollection('updates')).sort((a, b) =>
+  (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
+);
+const topics = (await getCollection('topics')).sort((a, b) => a.id.localeCompare(b.id));
+const archive = (await getCollection('archive')).sort((a, b) => a.id.localeCompare(b.id));
 
-const { collections } = Astro.props as { collections: SidebarGroup[] };
+const groups = [
+  {
+    title: 'Updates',
+    items: updates.map((e) => ({ title: e.data.title, url: `/updates/${e.id}/` })),
+  },
+  {
+    title: 'FAQ Topics',
+    items: topics.map((e) => ({
+      title: e.data.title,
+      url: `/topics/${e.id}/`,
+      external_url: e.data.external_url,
+    })),
+  },
+  {
+    title: 'Archive',
+    items: archive.map((e) => ({ title: e.data.title, url: `/archive/${e.id}/` })),
+  },
+];
+
+// Normalize /index.html → / (dev uses /, preview serves /index.html).
+const currentPath = Astro.url.pathname.replace(/index\.html$/, '');
 ---
 
 {
-  collections.map((group, i) => (
+  groups.map((group, i) => (
     <>
       <nav class="nav__items">
         <h3 class="nav__title">{group.title}</h3>
@@ -31,13 +47,15 @@ const { collections } = Astro.props as { collections: SidebarGroup[] };
                   {item.title}
                 </a>
               ) : (
-                <a href={item.url}>{item.title}</a>
+                <a href={item.url} class:list={{ active: item.url === currentPath }}>
+                  {item.title}
+                </a>
               )}
             </li>
           ))}
         </ul>
       </nav>
-      {i < collections.length - 1 && <hr class="sidebar-rule" />}
+      {i < groups.length - 1 && <hr class="sidebar-rule" />}
     </>
   ))
 }

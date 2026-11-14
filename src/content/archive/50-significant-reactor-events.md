@@ -19,7 +19,7 @@ The frequency of this event is a factor to consider, taken with the probability 
 This is particularly concerning for two reasons:
 
 1. The light water pools have to be biologically sealed from operators and personnel in the reactor room. This is necessary because the reactor produces [Nitrogen-16](https://chemlin.org/isotope/nitrogen-16), a highly radioactive isotope in gaseous form, which bubbles up from the core. Not great, not terrible. It has a short half-life of about 7 seconds and decays to stable daughter elements -- but will damage those breathing it in the room while it lasts.
-2. The core is surrounded by a sealed heavy water tank, some of which consists of [tritium](/topics/20-waste-tritium/).
+2. The core is surrounded by a sealed heavy water tank, some of which consists of [tritium](/archive/20-waste-tritium/).
 
 ## With both the light water and heavy water tank within sealed, how would such an incident be mitigated?
 

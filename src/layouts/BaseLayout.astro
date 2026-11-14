@@ -5,12 +5,13 @@
 // Note: the current Jekyll site has no visible nav; the About/Archive links
 // here are a small improvement (per MIGRATION.md design decision 1).
 import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
 
 interface Props {
   title?: string;
   description?: string;
-  /** Skip the 70ch article width (used by the landing page + sidebar). */
-  wide?: boolean;
+  /** Render the persistent sidebar (off only for 404). */
+  sidebar?: boolean;
 }
 
 const SITE_TITLE = 'Lockhart Nuke Watch';
@@ -19,7 +20,7 @@ const SITE_DESCRIPTION =
 const FACEBOOK_URL = 'https://www.facebook.com/groups/987252890512778';
 const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
 
-const { title, description = SITE_DESCRIPTION, wide = false } = Astro.props;
+const { title, description = SITE_DESCRIPTION, sidebar = true } = Astro.props;
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -49,9 +50,19 @@ const navLinks = [
       </nav>
     </header>
 
-    <main class:list={['site-main', { wide }]}
-      role="main">
-      <slot />
+    <main class="site-main" role="main">
+      {sidebar ? (
+        <div class="page">
+          <div class="page__content">
+            <slot />
+          </div>
+          <aside class="page__sidebar">
+            <Sidebar />
+          </aside>
+        </div>
+      ) : (
+        <slot />
+      )}
     </main>
 
     <footer class="site-footer">

@@ -27,4 +27,4 @@ The cancelled Meitner-1 VIPR reactor description on the NRC website [[https://ww
 
 This document describes 4 reactors, which is consistent with Meitner-1. Lockhart is the "pilot program" described in [this article](https://oklo.com/newsroom/news-details/2026/Oklo-and-DOE-Partner-to-Deploy-Radioisotope-Pilot-Facility-Supporting-Cancer-Care-and-U-S--Medical-Supply-Chains/default.aspx), the successor to that cancelled project, with similar power output (up to **16.8 MWt** in section 4.6.1) which uses pellets of Low-Enriched Uranium (LEU) fuel.
 
-This is confirmed in Oklo's [recent response](/updates/2026-05-11-our-response-to-oklo) to some of our questions.
+This is confirmed in Oklo's [recent response](/updates/2026-05-11-our-response-to-oklo/) to some of our questions.

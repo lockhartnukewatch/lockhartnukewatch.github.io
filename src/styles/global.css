@@ -95,13 +95,8 @@ pre {
 }
 
 .site-main {
-  max-width: 70ch;
-  padding: 0 3em;
-}
-
-.site-main.wide {
-  max-width: none;
-  padding: 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .site-footer {
@@ -116,41 +111,71 @@ pre {
   margin: 0;
 }
 
-/* Landing page: content + sidebar (unchanged from assets/css/main.scss) -- */
+/* Content + sidebar (port of the old .landing-* rules, now used on
+   every page so the sidebar persists) ---------------------------------- */
 
-.landing-wrapper {
+.page {
   display: flex;
   flex-wrap: wrap;
   gap: 3em;
   align-items: flex-start;
   margin-top: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 0 3em 3em;
   box-sizing: border-box;
 }
 
-.landing-content {
-  flex: 1;
+.page__content {
+  flex: 1 1 auto;
   min-width: 0;
+  max-width: 70ch;
 }
 
-.landing-sidebar {
+.page__sidebar {
   width: 280px;
   flex-shrink: 0;
+  position: sticky;
+  top: 1em;
+  font-size: 0.95em;
+}
+
+.page__sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page__sidebar li {
+  margin: 0.25em 0;
+}
+
+.page__sidebar .nav__title {
+  margin: 0 0 0.4em;
+  font-size: 1.05em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.page__sidebar a.active {
+  font-weight: 700;
+  color: var(--text);
 }
 
 @media (max-width: 1024px) {
-  .landing-wrapper {
+  .page {
     flex-direction: column;
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
-  .landing-sidebar {
+  .page__content,
+  .page__sidebar {
     width: 100%;
+    max-width: none;
+    position: static;
   }
 }
 
-/* Sidebar nav (port of _includes/sidebar-collection.html) --------------- */
+/* Sidebar divider ------------------------------------------------------- */
 
 .sidebar-rule {
   margin: 1em 0;

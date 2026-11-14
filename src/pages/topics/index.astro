@@ -1,0 +1,23 @@
+---
+// FAQ topics index: the section page behind the sidebar's "FAQ Topics"
+// heading (the sidebar itself is the main entry point to topics).
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const topics = (await getCollection('topics')).sort((a, b) => a.id.localeCompare(b.id));
+---
+
+<BaseLayout title="FAQ Topics">
+  <h1>FAQ Topics</h1>
+  <p>
+    Questions we should be asking about Oklo's Groves radioactive isotope
+    production reactor, grouped by topic.
+  </p>
+  <ul class="topic-list">
+    {topics.map((e) => (
+      <li>
+        <a href={`/topics/${e.id}/`}>{e.data.title}</a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+// Updates summary page: the same feed as the home page, so the sidebar's
+// "Updates" heading has a section index like FAQ Topics and Archive.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import UpdateFeed from '../../components/UpdateFeed.astro';
+---
+
+<BaseLayout title="Updates">
+  <h1>Updates</h1>
+  <p>
+    News and analysis about Oklo's Groves radioactive isotope production
+    reactor in Lockhart, Texas.
+  </p>
+  <UpdateFeed />
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+// All updates, newest first, each with its date as a small subheading over
+// the title link. Shared by the home page and /updates/.
+import { getCollection } from 'astro:content';
+import { formatDate } from '../lib/format';
+
+const updates = (await getCollection('updates')).sort(
+  (a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
+);
+---
+
+<div class="update-feed">
+  {updates.map((e) => (
+    <article class="update-entry">
+      {e.data.date && (
+        <p class="update-entry__date">{formatDate(e.data.date)}</p>
+      )}
+      <h2 class="update-entry__title">
+        <a href={`/updates/${e.id}/`}>{e.data.title}</a>
+      </h2>
+    </article>
+  ))}
+</div>

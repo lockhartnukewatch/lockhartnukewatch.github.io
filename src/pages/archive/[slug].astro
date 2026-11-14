@@ -12,5 +12,11 @@ const { Content } = await render(entry);
 ---
 
 <Article title={entry.data.title}>
+  <!-- Keep the inline <a> on the same source line as its text (JSX whitespace stripping). -->
+  <div slot="banner" class="callout">
+    <p>
+      <strong>Context:</strong> This article is from the earlier VIPR-based analysis. It assumed — based on the open sources available at the time — that Groves would be a VIPR reactor. Oklo has since disclosed that <a href="/updates/2026-05-25-oklo-latest-groves-press-release/">Groves is not a VIPR facility (yet)</a>. We keep this archive as an important warning for Lockhart: if Oklo ever expands operations into isotope production, these are the kinds of risks Oklo has already disclosed to the NRC.
+    </p>
+  </div>
   <Content />
 </Article>

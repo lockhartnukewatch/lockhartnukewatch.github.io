@@ -5,13 +5,8 @@
 // (The sidebar used to hide its "Updates" group here to avoid duplicating
 // the list in the main content, but the user found that inconsistent, so
 // it now shows on every page.)
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { formatDate } from '../lib/format';
-
-const updates = (await getCollection('updates')).sort(
-  (a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
-);
+import UpdateFeed from '../components/UpdateFeed.astro';
 ---
 
 <BaseLayout>
@@ -21,16 +16,5 @@ const updates = (await getCollection('updates')).sort(
     reactor in Lockhart, Texas. FAQ topics and the earlier VIPR-based archive
     are in the sidebar.
   </p>
-  <div class="update-feed">
-    {updates.map((e) => (
-      <article class="update-entry">
-        {e.data.date && (
-          <p class="update-entry__date">{formatDate(e.data.date)}</p>
-        )}
-        <h2 class="update-entry__title">
-          <a href={`/updates/${e.id}/`}>{e.data.title}</a>
-        </h2>
-      </article>
-    ))}
-  </div>
+  <UpdateFeed />
 </BaseLayout>

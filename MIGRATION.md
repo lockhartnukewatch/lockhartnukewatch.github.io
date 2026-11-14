@@ -190,6 +190,14 @@ public/
 - Gotcha (also about.astro): Astro compiles page markup like JSX — whitespace containing
   a newline is stripped, so an `<a>` tag on its own line loses the space to the text
   around it. Inline links must stay on the same source line as their surrounding text.
+- Section index pages: the sidebar's section headings link to `/updates/` (new — same feed
+  as home, shared via `UpdateFeed.astro`) and `/topics/` (new); Archive already had
+  `/archive/`. (New URLs; nothing existing pointed at them.)
+- Archive articles (`/archive/:slug/`) show a prominent `.callout` banner via the
+  `Article` component's `banner` named slot: the analysis assumed a VIPR based on
+  open sources at the time, Oklo has since said Groves is not a VIPR (yet), and the
+  archive is kept as a warning — isotope-production risks Oklo already disclosed to the
+  NRC. The `/archive/` index intro carries the same warning.
 
 ## Out of Scope
 

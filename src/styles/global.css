@@ -154,16 +154,40 @@ pre {
   padding: 0;
 }
 
-.page__sidebar li {
+.page__sidebar .nav__items li {
   margin: 0.25em 0;
 }
 
 .page__sidebar .nav__title {
   margin: 0 0 0.4em;
   font-size: 1.05em;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--muted);
+}
+
+/* Section headings link to the section index page. */
+.page__sidebar .nav__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page__sidebar .nav__title a:hover {
+  text-decoration: underline;
+}
+
+/* Contextual callout (archive pages: VIPR-assumption warning) ------------- */
+
+.callout {
+  margin: 0 0 1.5em;
+  padding: 0.9em 1.2em;
+  background: #fdf6e3;
+  border-left: 4px solid #e0a92e;
+}
+
+.callout p {
+  margin: 0.2em 0;
 }
 
 .page__sidebar a.active {
@@ -192,7 +216,7 @@ pre {
   }
 }
 
-/* Home page update feed --------------------------------------------------- */
+/* Update feed (home page + /updates/) -------------------------------------- */
 
 .update-entry {
   margin-top: 1.6em;
@@ -210,6 +234,10 @@ pre {
 .update-entry__title {
   margin: 0;
   font-size: 1.2em;
+}
+
+.topic-list li {
+  margin: 0.4em 0;
 }
 
 /* Sidebar dividers + the standalone About link --------------------------- */

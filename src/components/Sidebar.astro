@@ -11,13 +11,17 @@ const updates = (await getCollection('updates')).sort((a, b) =>
 const topics = (await getCollection('topics')).sort((a, b) => a.id.localeCompare(b.id));
 const archive = (await getCollection('archive')).sort((a, b) => a.id.localeCompare(b.id));
 
+// Each section heading links to that section's index page (the home page
+// happens to lead with the updates feed; /updates/ is its dedicated twin).
 const groups = [
   {
     title: 'Updates',
+    href: '/updates/',
     items: updates.map((e) => ({ title: e.data.title, url: `/updates/${e.id}/` })),
   },
   {
     title: 'FAQ Topics',
+    href: '/topics/',
     items: topics.map((e) => ({
       title: e.data.title,
       url: `/topics/${e.id}/`,
@@ -26,6 +30,7 @@ const groups = [
   },
   {
     title: 'Archive',
+    href: '/archive/',
     items: archive.map((e) => ({ title: e.data.title, url: `/archive/${e.id}/` })),
   },
 ];
@@ -38,7 +43,9 @@ const currentPath = Astro.url.pathname.replace(/index\.html$/, '');
   groups.map((group, i) => (
     <>
       <nav class="nav__items">
-        <h3 class="nav__title">{group.title}</h3>
+        <h3 class="nav__title">
+          <a href={group.href}>{group.title}</a>
+        </h3>
         <ul>
           {group.items.map((item) => (
             <li>

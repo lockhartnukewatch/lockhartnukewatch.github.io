@@ -1,6 +1,8 @@
 ---
 // Shared article page: front matter title as <h1> + markdown body.
 // Used by the /updates/:slug/, /topics/:slug/ and /archive/:slug/ routes.
+// Optional `banner` named slot for contextual callouts (archive pages use
+// it for the VIPR-assumption warning).
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 interface Props {
@@ -13,6 +15,7 @@ const { title } = Astro.props;
 <BaseLayout title={title}>
   <article>
     <h1>{title}</h1>
+    <slot name="banner" />
     <slot />
   </article>
 </BaseLayout>

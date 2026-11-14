@@ -71,10 +71,6 @@ pre {
 /* Header / footer ------------------------------------------------------ */
 
 .site-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 1.5em;
   padding: 1em 3em;
   border-bottom: 1px solid var(--rule);
 }
@@ -87,11 +83,6 @@ pre {
 
 .site-title:hover {
   text-decoration: none;
-}
-
-.site-nav {
-  display: flex;
-  gap: 1em;
 }
 
 .site-main {
@@ -133,6 +124,9 @@ pre {
 .page__sidebar {
   width: 280px;
   flex-shrink: 0;
+  /* Sidebar comes after the content in the DOM; on desktop it is the left
+     column, on mobile it falls below the content. */
+  order: -1;
   position: sticky;
   top: 1em;
   font-size: 0.95em;
@@ -173,9 +167,32 @@ pre {
     max-width: none;
     position: static;
   }
+  .page__sidebar {
+    order: 0;
+  }
 }
 
-/* Sidebar divider ------------------------------------------------------- */
+/* Home page update feed --------------------------------------------------- */
+
+.update-entry {
+  margin-top: 1.6em;
+}
+
+.update-entry__date {
+  margin: 0 0 0.1em;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.update-entry__title {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* Sidebar dividers + the standalone About link --------------------------- */
 
 .sidebar-rule {
   margin: 1em 0;

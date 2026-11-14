@@ -176,6 +176,15 @@ public/
   rendered by `BaseLayout` on every page except 404, so the updates/topics/archive lists
   persist on article pages. The old `.landing-*` wrapper was generalized to `.page`.
 - The current page is highlighted in the sidebar.
+- The header nav (Home / About / Archive) was dropped: the header is now just the site
+  title, and all navigation lives in the sidebar (left on desktop, below content on
+  mobile), which gained an "About this site" link.
+- The home page is now the update feed: all updates, newest first, each with its date as
+  a small subheading over the title link (the sidebar's "Updates" group is hidden there).
+  The old index intro (mission statement) moved to `/about/` as "About this project".
+- Bug found: `about.astro` (and the old `index.astro`) passed a raw markdown string to
+  `render()`, which in this Astro version only accepts content entries — the pages
+  silently built with an empty body. The about body is now hand-written HTML in the page.
 
 ## Out of Scope
 

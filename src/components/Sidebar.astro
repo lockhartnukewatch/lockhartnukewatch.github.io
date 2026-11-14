@@ -3,7 +3,15 @@
 // Fetches its own collections (Jekyll read site collections directly; this is
 // the Astro equivalent) so any page can just drop in <Sidebar />.
 // Items with external_url open in a new tab.
+// `hide` drops groups (the home page hides "Updates" — its main content is
+// the full update list).
 import { getCollection } from 'astro:content';
+
+interface Props {
+  hide?: ('updates' | 'topics' | 'archive')[];
+}
+
+const { hide = [] } = Astro.props;
 
 const updates = (await getCollection('updates')).sort((a, b) =>
   (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
@@ -13,10 +21,12 @@ const archive = (await getCollection('archive')).sort((a, b) => a.id.localeCompa
 
 const groups = [
   {
+    id: 'updates',
     title: 'Updates',
     items: updates.map((e) => ({ title: e.data.title, url: `/updates/${e.id}/` })),
   },
   {
+    id: 'topics',
     title: 'FAQ Topics',
     items: topics.map((e) => ({
       title: e.data.title,
@@ -25,10 +35,11 @@ const groups = [
     })),
   },
   {
+    id: 'archive',
     title: 'Archive',
     items: archive.map((e) => ({ title: e.data.title, url: `/archive/${e.id}/` })),
   },
-];
+].filter((g) => !hide.includes(g.id));
 
 // Normalize /index.html → / (dev uses /, preview serves /index.html).
 const currentPath = Astro.url.pathname.replace(/index\.html$/, '');
@@ -59,3 +70,9 @@ const currentPath = Astro.url.pathname.replace(/index\.html$/, '');
     </>
   ))
 }
+<hr class="sidebar-rule" />
+<nav class="nav__items">
+  <a href="/about/" class:list={{ active: currentPath === '/about/' }}>
+    About this site
+  </a>
+</nav>

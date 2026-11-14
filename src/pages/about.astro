@@ -1,34 +1,110 @@
 ---
-// Port of about.markdown (body inlined; the page has no dynamic data).
-import { render } from 'astro:content';
+// Port of about.markdown (body inlined as HTML; the page has no dynamic
+// data). Note: this body was previously passed to `render()` as a raw
+// markdown string, but this Astro version's render() only accepts content
+// entries, so the page silently rendered empty. Hand-written HTML avoids
+// the question. The old index.markdown intro (mission statement) moved here
+// as "About this project" when the home page became the update feed.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const { Content } = await render(`
-## Contact
-
-Find us at [Lockhart Nuke Watch on Facebook](https://www.facebook.com/groups/987252890512778) or [contact@lockhartnuke.watch](mailto:contact@lockhartnuke.watch).
-
-"Lockhart Nuke Watch" was started to try and gather information about the Groves Isotope nuclear reactor being built in Lockhart, Texas by Oklo.
-
-## About the author
-
-Well, it ain't about me, darlin'.
-
-When I (the author) discovered this project, Groves seemed so far along in fast-tracked approval, while being simultaneously difficult to learn anything substantial about it other than from press releases. I wanted to try and distill the research I was doing, to protect the people I love and the area I grew up in.
-
-I'm not a reporter, but maybe a reporter can find it useful. If you have feedback from this perspective, I would readily receive it. Never done anything like this before.
-
-I'm not a nuclear engineer by trade, but I am somewhat technical. You might say that I am a humble permanent student of complex systems. I would welcome review and feedback from experts in the regulatory and engineering domains that intersect with this issue.
-
-I learned about Groves in passing conversation, someone from out of town shooting their mouth off. They were bragging about how easy it is to do anything in Texas, to Texas, because there's no protections here. And when I looked into it... I was shocked.
-
-Don't mess with Texas.
-`);
+const OKLO_NEWSROOM_URL =
+  'https://oklo.com/newsroom/news-details/2026/Oklos-Atomic-Alchemy-Announces-U-S--Department-of-Energy-Approval-for-Nuclear-Safety-Design-Agreement-of-its-Groves-Isotopes-Test-Reactor/default.aspx';
+const NPR_URL = 'https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump';
+const FACEBOOK_URL = 'https://www.facebook.com/groups/987252890512778';
+const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
 ---
 
 <BaseLayout title="About">
   <article>
     <h1>About</h1>
-    <Content />
+    <h2>About this project</h2>
+    <p>
+      "Lockhart Nuke Watch" was started to try and gather information about
+      the Groves Isotope nuclear reactor being built in Lockhart, Texas by
+      Oklo.
+    </p>
+    <p>
+      The
+      <a href={OKLO_NEWSROOM_URL} target="_blank" rel="noopener"
+        >Groves radioactive isotope facility being built by Oklo in Lockhart, Texas</a
+      >
+      has received very little publicity until now. When starting this
+      research, the only available materials were slick press releases and
+      almost impenetrable regulatory documents.
+    </p>
+    <p>
+      This site seeks to correct that and raise awareness of a consequential
+      decision that is being made for the people and living creatures of
+      Lockhart, Texas and the surrounding Central Texas area, whether they
+      are aware or not.
+    </p>
+    <p>
+      Projects like Groves are being fast tracked
+      <a href={NPR_URL} target="_blank" rel="noopener"
+        >under sweeping changes made to nuclear safety directives under the
+        Trump administration</a
+      >
+      starting in 2025. This is not a political issue, but a safety issue.
+      Read the previous link, review the changes in the wording, the
+      side-by-side before and after changes. Ask yourself why the language
+      has been so softened and compromised.
+    </p>
+    <p>
+      Keep these changes in mind when reviewing the questions and their
+      researched context below. Operating a nuclear reactor, even a small
+      one, is a serious undertaking that demands transparency and
+      accountability to the lives of the people depending on its responsible
+      design and stewardship.
+    </p>
+    <p>
+      There are many questions about this project, based on research
+      conducted in pursuit of what that should look like, and how to even
+      know how to ask for it. So many, that they are grouped according to
+      topic in the sidebar.
+    </p>
+    <p>
+      As a central Texans, these are the kinds of questions we should be
+      asking, for our future, our children and grandchildren's futures.
+    </p>
+    <h2>Contact</h2>
+    <p>
+      Find us at
+      <a href={FACEBOOK_URL} target="_blank" rel="noopener"
+        >Lockhart Nuke Watch on Facebook</a
+      >
+      or <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+    </p>
+    <p>
+      What else do you wish you knew about this Lockhart nuclear reactor?
+      Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with
+      your questions and concerns. All we have is each other.
+    </p>
+    <h2>About the author</h2>
+    <p>Well, it ain't about me, darlin'.</p>
+    <p>
+      When I (the author) discovered this project, Groves seemed so far
+      along in fast-tracked approval, while being simultaneously difficult
+      to learn anything substantial about it other than from press releases.
+      I wanted to try and distill the research I was doing, to protect the
+      people I love and the area I grew up in.
+    </p>
+    <p>
+      I'm not a reporter, but maybe a reporter can find it useful. If you
+      have feedback from this perspective, I would readily receive it. Never
+      done anything like this before.
+    </p>
+    <p>
+      I'm not a nuclear engineer by trade, but I am somewhat technical. You
+      might say that I am a humble permanent student of complex systems. I
+      would welcome review and feedback from experts in the regulatory and
+      engineering domains that intersect with this issue.
+    </p>
+    <p>
+      I learned about Groves in passing conversation, someone from out of
+      town shooting their mouth off. They were bragging about how easy it is
+      to do anything in Texas, to Texas, because there's no protections
+      here. And when I looked into it... I was shocked.
+    </p>
+    <p>Don't mess with Texas.</p>
   </article>
 </BaseLayout>

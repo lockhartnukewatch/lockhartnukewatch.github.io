@@ -1,9 +1,10 @@
 ---
-// Base layout: <head> metadata, header (site title + nav), main, footer.
+// Base layout: <head> metadata, header (site title only), main (content +
+// persistent sidebar), footer.
 // Ported from the Jekyll era: site title/description from _config.yml,
 // Facebook group link + contact email in the footer.
-// Note: the current Jekyll site has no visible nav; the About/Archive links
-// here are a small improvement (per MIGRATION.md design decision 1).
+// All navigation lives in the sidebar (left on desktop, below content on
+// mobile); the header is just the site title.
 import '../styles/global.css';
 import Sidebar from '../components/Sidebar.astro';
 
@@ -12,6 +13,8 @@ interface Props {
   description?: string;
   /** Render the persistent sidebar (off only for 404). */
   sidebar?: boolean;
+  /** Drop sidebar groups (e.g. the home page hides "Updates"). */
+  sidebarHide?: ('updates' | 'topics' | 'archive')[];
 }
 
 const SITE_TITLE = 'Lockhart Nuke Watch';
@@ -20,13 +23,9 @@ const SITE_DESCRIPTION =
 const FACEBOOK_URL = 'https://www.facebook.com/groups/987252890512778';
 const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
 
-const { title, description = SITE_DESCRIPTION, sidebar = true } = Astro.props;
+const { title, description = SITE_DESCRIPTION, sidebar = true, sidebarHide } =
+  Astro.props;
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about/' },
-  { label: 'Archive', href: '/archive/' },
-];
 ---
 
 <!doctype html>
@@ -41,13 +40,6 @@ const navLinks = [
   <body>
     <header class="site-header">
       <a class="site-title" href="/">{SITE_TITLE}</a>
-      <nav class="site-nav" aria-label="Main">
-        {
-          navLinks.map((link) => (
-            <a href={link.href}>{link.label}</a>
-          ))
-        }
-      </nav>
     </header>
 
     <main class="site-main" role="main">
@@ -57,7 +49,7 @@ const navLinks = [
             <slot />
           </div>
           <aside class="page__sidebar">
-            <Sidebar />
+            <Sidebar hide={sidebarHide} />
           </aside>
         </div>
       ) : (

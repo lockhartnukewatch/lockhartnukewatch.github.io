@@ -10,7 +10,7 @@ function entry(path, lastmod) {
 }
 
 export async function GET() {
-  const updates = await getCollection('updates');
+  const updates = (await getCollection('updates')).filter((e) => !e.data.draft);
   const topics = await getCollection('topics');
   const archive = await getCollection('archive');
   const now = new Date();

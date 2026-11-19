@@ -1,7 +1,6 @@
 ---
 title: "Groves-1 reaches criticality: what's actually going on at the site"
 date: 2026-11-16
-draft: true
 ---
 
 On August 5, 2026, **Groves-1** — Oklo's Groves Isotope Test Reactor in Lockhart — reached initial criticality. Then, on November 11, the DOE [cleared it for unrestricted operations](https://investor.oklo.com/news/news-details/2026/Oklos-Groves-1-to-Begin-Research-and-Demonstration-Phase-after-being-Cleared-by-U-S--Department-of-Energy-for-Unrestricted-Operations/default.aspx), beginning what Oklo describes as a "research and demonstration phase."

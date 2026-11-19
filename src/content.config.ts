@@ -8,6 +8,10 @@ const docSchema = z.object({
   title: z.string(),
   date: z.date().optional(),
   external_url: z.string().url().optional(),
+  // Draft entries are still built and served at their real URL (so the link
+  // can be shared privately for review), but are hidden from the sidebar,
+  // feeds, RSS, and sitemap.
+  draft: z.boolean().default(false),
 });
 
 const updates = defineCollection({

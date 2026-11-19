@@ -8,7 +8,9 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 
 export async function GET(context) {
-  const updates = (await getCollection('updates')).sort(
+  const updates = (await getCollection('updates'))
+    .filter((e) => !e.data.draft)
+    .sort(
     (a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0),
   );
 

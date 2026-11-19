@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#12161c"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#f5b301" stroke-width="4" rx="12"/>
+
+  <!-- Radiation trefoil: three 60-degree blades + center dot -->
+  <g fill="#f5b301">
+    <path d="M 600 215 L 670 93.7 A 140 140 0 0 0 530 93.7 Z"/>
+    <path d="M 600 215 L 460 215 A 140 140 0 0 0 530 336.2 Z"/>
+    <path d="M 600 215 L 670 336.2 A 140 140 0 0 0 740 215 Z"/>
+  </g>
+  <circle cx="600" cy="215" r="56" fill="#12161c"/>
+  <circle cx="600" cy="215" r="34" fill="#f5b301"/>
+
+  <text x="600" y="452" text-anchor="middle" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-weight="bold" font-size="72" fill="#f2f5f7">Lockhart Nuke Watch</text>
+  <text x="600" y="522" text-anchor="middle" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="38" fill="#9aa4ad">Groves Isotope reactor &#183; Lockhart, Texas</text>
+  <text x="600" y="576" text-anchor="middle" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="28" fill="#6b7683">www.lockhartnuke.watch</text>
+</svg>

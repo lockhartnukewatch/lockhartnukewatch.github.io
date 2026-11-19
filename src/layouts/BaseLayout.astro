@@ -23,6 +23,8 @@ const CONTACT_EMAIL = 'contact@lockhartnuke.watch';
 
 const { title, description = SITE_DESCRIPTION, sidebar = true } = Astro.props;
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og-image.png', Astro.site);
 ---
 
 <!doctype html>
@@ -32,7 +34,21 @@ const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/feed.xml" />
     <title>{pageTitle}</title>
+
+    <!-- Open Graph / Twitter: social previews (esp. the Facebook group). -->
+    <meta property="og:site_name" content={SITE_TITLE} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
     <header class="site-header">

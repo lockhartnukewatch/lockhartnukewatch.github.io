@@ -6,6 +6,9 @@ import { glob } from 'astro/loaders';
 // Jekyll sidebar-collection include (links open in a new tab when present).
 const docSchema = z.object({
   title: z.string(),
+  // Meta description for <meta> and Open Graph tags. When omitted, the page
+  // falls back to the first ~160 chars of the body (src/lib/meta.ts).
+  description: z.string().max(300).optional(),
   date: z.date().optional(),
   external_url: z.string().url().optional(),
   // Draft entries are still built and served at their real URL (so the link

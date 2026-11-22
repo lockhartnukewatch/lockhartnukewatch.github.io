@@ -1,7 +1,6 @@
 ---
 title: "Oklo's Yb Feedstock: The Actinide Question"
 date: 2026-11-19
-draft: true
 ---
 
 On September 10, 2026, Oklo published a post reporting that [Actinide Inc.](https://www.actinideinc.com/press/actinide-becomes-first-startup-to-ever-enrich-natural-uranium-to-produce-haleu) had delivered two grams of enriched ytterbium-176 to its Groves facility in Lockhart ([Oklo](https://oklo.com/blog/two-grams-to-help-build-americas-isotope-supply)).

@@ -36,14 +36,6 @@ The company raised an oversubscribed seed round in March 2026 led by [Onto Ventu
 | **Claimed / demonstrated** | First-generation calutron delivered enriched Yb-176 (>95% Yb-176) to Oklo; HALEU result at research scale (15.38%), under NRC lab exemption; Fortitude (2nd gen) under construction |
 | **Scale** | Grams of Yb-176 delivered; commercial deliveries at ~$30k/gram ([Actinide](https://www.actinideinc.com/press/actinide-becomes-first-startup-to-ever-enrich-natural-uranium-to-produce-haleu); [TBPN](https://daily.scuttlebutt.co/p/robert-mendelsohn-and-eric-olszewski)); kg-scale production unproven |
 
-## The Oklo–Actinide link
-
-The relationship is now clearer than Oklo's own communications sometimes let on. Oklo [acquired Atomic Alchemy](https://www.powermag.com/oklos-25m-move-into-radioisotope-production-to-expand-advanced-nuclear-revenue-stream/) in February 2025 for $25 million in all-stock, adding radioisotope production capabilities to Oklo's reactor and fuel-recycling operations. Atomic Alchemy was founded in 2018 by [Thomas Eiden](https://twitter.com/AtomicEiden) (X; profile archived at [TwStalker](https://twstalker.com/AtomicEiden)), whom Oklo then brought in as its Senior Director of Isotopes; the TwStalker profile describes him as "Founder & CEO of Atomic Alchemy" and "Senior Director of Isotopes at Oklo" ([TwStalker](https://twstalker.com/AtomicEiden)).
-
-The Groves-1 building at Proto-Town, Oklo's lease site in Caldwell County, is registered in TCEQ/Texas records under the tenant name **Thomas Eiden / Atomic Alchemy** ([Groves-1 piece](/updates/2026-11-16-groves-1-criticality/)).
-
-So the hinted chain reads: **Actinide (enrichment) → Oklo Isotopes (irradiation + chemical processing) → Lu-177 → cancer treatment.** Oklo Isotopes is the customer; Atomic Alchemy — now an Oklo subsidiary — is the bridge; Actinide is the upstream producer.
-
 ## Can Actinide deliver the feedstock Groves-2 needs?
 
 Groves-2 Forge is supposed to be the machine that turns that feedstock into product: a reactor plus chemical plant, with "irradiation, processing, and product finishing" brought together ([Oklo](https://oklo.com/newsroom/oklo-to-advance-groves-2-forge-as-part-of-u-s-department-of-energys-nuclear-energy-launch-pad-se)).

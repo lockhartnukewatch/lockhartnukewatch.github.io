@@ -5,7 +5,7 @@ set -euxo pipefail
 npm install
 npm run build
 
-ts=$(date +%Y%M%D-%H%M%S)
+ts=$(date +%Y%m%d-%H%M%S)
 
 # Copy build output into the _site submodule (working tree of the gh-pages
 # branch). CNAME and robots.txt live in public/, so they're already in

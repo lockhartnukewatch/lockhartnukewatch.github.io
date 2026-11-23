@@ -34,6 +34,12 @@ On Aug. 17, 2026, the Canadian Nuclear Safety Commission amended the licensing b
 
 Bruce's isotope production has run under a public regulator with public licensing-basis documents and a public hearing record behind it. The technical ambition Oklo has sketched for Groves-2 Forge -- high-flux reactor plus hot cell plus Yb-176 to Lu-177 -- has been licensed in Canada's framework. Oklo's version remains a DOE pilot whose reactor deck is a "WORKING DRAFT."
 
+### MURR: a US reactor producing Lu-177 end to end
+
+The University of Missouri Research Reactor (MURR) is the only reported end-to-end domestic producer of no-carrier-added Lu-177 in the United States, and it produced GMP Lu-177 for global distribution -- 52 weeks a year, per ProGen Search's isotope production map.
+
+It is a useful counter-example because it shows isotope production operating inside a public, government-run research reactor framework rather than an opaque commercial startup -- a different path to the same product as Oklo's Groves-2 Forge.
+
 ### ProGen Search built a transparency methodology for the isotope supply chain
 
 ProGen Search's [Isotope Production Map](https://www.progensearch.com/analysis/isotope-production-map) is a transparency-first attempt to answer "who produces what, and how much actually came out?" Its capacity tiers (announced, commissioned, GMP or national approval, actual output), source register, and evidence-class system exist precisely because -- in ProGen's words -- "your supplier says they've got capacity. Have they ever actually made any? Most of the time you can't find out. Not from public material, not from the data room, not from the trade press. Which is exactly the gap that this closes."
@@ -74,7 +80,7 @@ The positive counterexamples suggest a short, checkable list:
 - [SON and Bruce Power -- project name announcement](https://www.saugeenojibwaynation.ca/news/son-and-bruce-power-announce-project-name-medical-isotope-collaboration)
 - [Bruce Power and SON -- Gamzook'aamin aakoziwin partnership expansion](https://www.brucepower.com/2024/05/22/bruce-power-and-saugeen-ojibway-nation-expand-gamzookaamin-aakoziwin-partnership-to-increase-production-of-cancer-fighting-isotopes/)
 - [Canada's National Observer -- Ontario First Nations strike revenue-sharing deal with Bruce Power](https://www.nationalobserver.com/2023/06/28/news/ontario-first-nations-strike-revenue-sharing-deal-canada-largest-nuclear-plant/)
+- [OPG / Laurentis Energy Partners -- Darlington Target Delivery System isotope production](https://www.opg.com/news-resources/newsroom/our-stories/story/opgs-laurentis-energy-partners-cleared-to-produce-more-life-saving-isotopes/)
 - [ProGen Search -- Isotope Production Map](https://www.progensearch.com/analysis/isotope-production-map) and [The Lu-177 Capacity Number Nobody Publishes](https://www.progensearch.com/research/articles/lu-177-capacity-number-nobody-publishes)
-- [Transatomic -- open-source reactor repository](https://github.com/transatomic/reactor/)
 - [Oklo -- "Two grams to help build America's isotope supply"](https://oklo.com/blog/two-grams-to-help-build-americas-isotope-supply) and [Oklo's response to our questions](/updates/2026-05-11-our-response-to-oklo/)
 - [Actinide -- first startup to enrich uranium, producing HALEU](https://www.actinideinc.com/press/actinide-becomes-first-startup-to-ever-enrich-natural-uranium-to-produce-haleu) and [the regulatory gap reported at ic.work](https://www.ic.work/article/actinide-haleu-enrichment-regulatory-gap)

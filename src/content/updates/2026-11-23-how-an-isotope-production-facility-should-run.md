@@ -3,7 +3,7 @@ title: "How an Isotope Production Facility Should Run"
 date: 2026-11-23
 ---
 
-There's a lot here about problems with Oklo and their Groves project. Our problem is not with medical isotope production. It's a noble pursuit, to try and produce rare and hard-to-obtain, life-saving medicine. I watched a dear friend battle cancer. He received radiotherapy at one point. Maybe medicine like this could have helped?
+There's a lot here about problems with Oklo and their Groves project. Our problem is not with medical isotope production. It's a noble pursuit, to try and produce rare and hard-to-obtain, life-saving medicine.
 
 Our criticism of Oklo's Groves project comes from the lack of transparency and community participation in the site selection, the behind-closed-doors deals, approvals, and build-out.
 

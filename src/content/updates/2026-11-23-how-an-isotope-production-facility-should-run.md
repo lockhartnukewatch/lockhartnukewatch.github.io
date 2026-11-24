@@ -1,7 +1,6 @@
 ---
 title: "How an Isotope Production Facility Should Run"
 date: 2026-11-23
-draft: true
 ---
 
 There's a lot here about problems with Oklo and their Groves project. Why? It's a noble pursuit, to try and produce rare and hard-to-obtain, life-saving medicine. I had a friend pass away from cancer. Maybe medicine like this could have helped? He did receive radiotherapy at one point.
@@ -10,9 +9,9 @@ Our criticism comes from a lack of transparency and community participation in t
 
 It doesn't have to be like this! There is a way to produce radiological medicine (as Oklo advertises) in a such a way that builds trust through transparency, partners with affected communities, submits to public regulatory review, and even reduces the world's nuclear weapon arsenal.
 
-## What we could have instead
+## What we should have instead
 
-### TMC Group: a private producer publishing real numbers, and engaging the community
+### TMC Group: a private producer publishing real numbers
 
 The source behind one of the more concrete production disclosures in the Lu-177 story is **TMC Group**, the North Vancouver-based manufacturer of high-purity enriched stable isotopes.
 
@@ -21,6 +20,8 @@ TMC manufactures Ytterbium-176, Gallium-69, and Gadolinium-160 for medical radio
 In May 2026, TMC announced new production lines adding 50% capacity to support next-generation radiotheranostics. Earlier reporting on TMC's numbers -- later mapped by ProGen Search in [The Lu-177 Capacity Number Nobody Publishes](https://www.progensearch.com/research/articles/lu-177-capacity-number-nobody-publishes) -- put TMC's 2025 output at **more than two kilograms of elemental Yb-176**, at isotopic purity above 99.7%. By October 2025, TMC had also reported **more than 250 g of Yb-176 in stock and available for purchase**.
 
 In August 2025, TMC Group joined the Canadian Nuclear Isotope Council (CNIC), a not-for-profit network of Canadian isotope stakeholders -- an angle that makes TMC a reasonable example of a private isotope producer engaging a broader community/industry coalition while publishing production figures of its own.
+
+Even a private producer like TMC is subject to Canada's nuclear regulatory framework, and its operations run under that oversight rather than outside it. And on the community front, how TMC works with the communities in which it operates is a two-way conversation that deserves the same public scrutiny as its production numbers.
 
 ### Bruce Power ran its Lu-177 production under a public regulator
 
@@ -32,13 +33,23 @@ Irradiation began in 2022; a second Unit 7 line came online in 2024; an on-site 
 
 On Aug. 17, 2026, the Canadian Nuclear Safety Commission amended the licensing basis for Lu-177 production at Bruce A and B. On Aug. 18, the CNSC approved the on-site hot cell facility.
 
-Bruce's isotope production has run under a public regulator with public licensing-basis documents and a public hearing record behind it. The technical ambition Oklo has sketched for Groves-2 Forge -- high-flux reactor plus hot cell plus Yb-176 to Lu-177 -- has been licensed in Canada's framework. Oklo's version remains a DOE pilot whose reactor deck is a "WORKING DRAFT."
+Bruce's isotope production has run under a public regulator with public licensing-basis documents and a public hearing record behind it. The revenue-sharing agreement Bruce Power struck with First Nations -- [as reported by the National Observer](https://www.nationalobserver.com/2023/06/28/news/ontario-first-nations-strike-revenue-sharing-deal-canada-largest-nuclear-plant/) -- is a welcome acknowledgment of Indigenous partnership, even as questions of consent and benefit-sharing remain.
+
+The technical ambition Oklo has sketched for Groves-2 Forge -- high-flux reactor plus hot cell plus Yb-176 to Lu-177 -- has been licensed in Canada's framework. Oklo's version remains a DOE pilot whose reactor deck is a "WORKING DRAFT."
+
+Beyond Bruce, another public-pathway example of isotope production: OPG's [Laurentis Energy Partners](https://www.opg.com/news-resources/newsroom/our-stories/story/opgs-laurentis-energy-partners-cleared-to-produce-more-life-saving-isotopes/) has cleared to produce more life-saving isotopes at the Darlington nuclear plant.
 
 ### MURR: a US reactor producing Lu-177 end to end
 
 The University of Missouri Research Reactor (MURR) is the only reported end-to-end domestic producer of no-carrier-added Lu-177 in the United States, and it produced GMP Lu-177 for global distribution -- 52 weeks a year, per ProGen Search's isotope production map.
 
 It is a useful counter-example because it shows isotope production operating inside a public, government-run research reactor framework rather than an opaque commercial startup -- a different path to the same product as Oklo's Groves-2 Forge.
+
+### ISIS: a UK accelerator-based isotope facility
+
+The UK's [ISIS Neutron and Muon Source](https://www.isis.stfc.ac.uk/about/technology/accelerator-technology/) operates an 800 MeV proton accelerator producing intense neutron and muon beams for science and medicine -- a public, national facility rather than an opaque commercial startup.
+
+It is a useful counter-example because it shows accelerator-based isotope production running in the open, in publicly owned hands, rather than through a secretive commercial venture.
 
 ### ProGen Search built a transparency methodology for the isotope supply chain
 
@@ -81,6 +92,7 @@ The positive counterexamples suggest a short, checkable list:
 - [Bruce Power and SON -- Gamzook'aamin aakoziwin partnership expansion](https://www.brucepower.com/2024/05/22/bruce-power-and-saugeen-ojibway-nation-expand-gamzookaamin-aakoziwin-partnership-to-increase-production-of-cancer-fighting-isotopes/)
 - [Canada's National Observer -- Ontario First Nations strike revenue-sharing deal with Bruce Power](https://www.nationalobserver.com/2023/06/28/news/ontario-first-nations-strike-revenue-sharing-deal-canada-largest-nuclear-plant/)
 - [OPG / Laurentis Energy Partners -- Darlington Target Delivery System isotope production](https://www.opg.com/news-resources/newsroom/our-stories/story/opgs-laurentis-energy-partners-cleared-to-produce-more-life-saving-isotopes/)
+- [ISIS Neutron and Muon Source -- accelerator technology](https://www.isis.stfc.ac.uk/about/technology/accelerator-technology/)
 - [ProGen Search -- Isotope Production Map](https://www.progensearch.com/analysis/isotope-production-map) and [The Lu-177 Capacity Number Nobody Publishes](https://www.progensearch.com/research/articles/lu-177-capacity-number-nobody-publishes)
 - [Oklo -- "Two grams to help build America's isotope supply"](https://oklo.com/blog/two-grams-to-help-build-americas-isotope-supply) and [Oklo's response to our questions](/updates/2026-05-11-our-response-to-oklo/)
 - [Actinide -- first startup to enrich uranium, producing HALEU](https://www.actinideinc.com/press/actinide-becomes-first-startup-to-ever-enrich-natural-uranium-to-produce-haleu) and [the regulatory gap reported at ic.work](https://www.ic.work/article/actinide-haleu-enrichment-regulatory-gap)
